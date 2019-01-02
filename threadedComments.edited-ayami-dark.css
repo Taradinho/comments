@@ -1,0 +1,188 @@
+/*!Leyre CSS Comment v1.0.5*/
+.comment {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.comment-content {
+    padding-bottom: 1rem;
+    margin-bottom: 5.5rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+    color: rgba(227,228,230,100);
+	text-shadow: rgba(227,228,230,100) 0 0 1px;
+    line-height: 1.6rem;
+}
+.comment-thread li,
+.comment-thread ol {
+    list-style-type: none;
+    text-align: left;
+}
+.comment-thread ol {
+    padding: 0;
+}
+.comment-thread li::after {
+    content: &quot;&quot;;
+    clear: both;
+    display: block;
+}
+.comment-block {
+    background: rgba(0,0,0, 0.75);
+    border: 2px solid rgba(0,0,0, .8);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0, .05), 0 1px 5px 0 rgba(0,0,0,.05), 0 3px 1px -2px rgba(0,0,0, .2);
+	position: relative;
+}
+.comment-header {
+    position: absolute;
+    bottom: 4rem;
+    left: 1.5rem;
+}
+.icon.blog-author {
+    top: 0;
+    bottom: 0;
+    height: auto;
+    width: 1.6rem;
+    margin: 0;
+    display: inline-block;
+}
+.icon.blog-author:before {
+  font-family: &quot;Font Awesome 5 Free&quot;;
+  font-weight: 900;
+  content: &quot;\f00c&quot;;
+    position: absolute;
+    top: -5px;
+    bottom: 0;
+    padding-left: 2px;
+    text-align: center;
+	color: rgba(78,169,209,100);
+	text-shadow: 1px 1px 1px rgba(78,169,209,100);
+}
+.comment-header .user {
+    margin-right: .2rem;
+}
+.comment-header .user,
+.comment-header .user a {
+    font-style: normal;
+    font-variant:small-caps;
+    font-weight: 500;
+    color: rgba(187,23,122,100);
+	text-shadow: rgba(187,23,122,100) 0 0 1px;
+}
+.user a:hover{
+    color: rgba(198,34,66,100);
+	text-shadow: rgba(198,34,66,100) 0 0 2px;
+}
+.comment-header .datetime&gt;a {
+    color: rgba(61,61,61,100);
+    font-weight: 400;
+	float: right;
+ 	display: inline-block;
+}
+.datetime&gt;a:hover {
+    color: rgba(255,255,255,100);
+	text-shadow: rgba(255,255,255,100) 0 0 2px;
+}
+.avatar-image-container {
+    float: left;
+    height: 68px;
+    width: 68px;
+    background-size: cover;
+    background-color: rgba(0,0,0, .8);
+    border: 2px solid rgba(0,0,0,100);
+    border-radius: 20%;
+    overflow: hidden;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2), 0 0 2px 0 rgba(0,0,0,0.1);
+	display:none;
+}
+.avatar-image-container img {
+    width: 100%;
+}
+.comment-replies .avatar-image-container {
+    width: 48px;
+    height: 48px;
+	border-radius: 6px;
+}
+.thread-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 40;
+}
+.thread-toggle a {
+    text-indent: -9999px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    opacity: .5;
+    background: url(//i.imgur.com/fYB2Q9j.png) center no-repeat;
+}
+.thread-toggle.thread-expanded a {
+    background-image: url(//i.imgur.com/wNJ1SRD.png);
+}
+.thread-toggle a:hover {
+    opacity: .9;
+}
+.continue,
+.loadmore,
+.thread-chrome.thread-collapsed {
+    display: none;
+}
+.deleted-comment {
+    padding: 1rem;
+    display: block;
+    background: rgba(0,0,0, .1);
+    border-radius: 3px
+}
+.comment-actions {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+.comment-actions,.comment-actions a {
+	color: rgba(244,230,255,100);
+	text-shadow: rgba(244,230,255,100) 0 0 1px;
+}
+.comment-actions a:hover {
+	color: rgba(255,255,255,100);
+	text-shadow: rgba(255,255,255,100) 0 0 2px;
+}
+.comment-replies .comment, 
+.comment-replybox-single {
+    margin-left: 1rem;
+}
+@media (min-width: 768px){
+	.comment-replies .comment,
+	.comment-replybox-single {
+    	margin-left: 5rem;
+	}
+	.avatar-image-container {
+    	display: block;
+	}
+	.comment-header {
+    	bottom: 1.5rem;
+	}
+
+	.comment-content {
+    	margin-bottom: 2.5rem;
+	}
+	.comment-actions {
+    	left: auto;
+    	right: 1.5rem;
+	}
+	.comment-block {
+		margin-left: 5.5rem;
+    }
+	.comment-replies .comment-block {
+    	margin-left: 4rem;
+	}
+}
+.comment-replies .comment-content {
+    margin-bottom: 2.5rem;
+}
+.comment-replies .comment-header {
+    bottom: 1.5rem;
+}
